@@ -1,0 +1,177 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 to ensure correct rendering across browsers -->
+<html lang="en"> <!-- Root element of the page, specifying English as the primary language -->
+
+<head> <!-- Container for page metadata, character sets, viewports, and stylesheet linkages -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for wide character support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures the layout scales properly on mobile and desktop viewports -->
+  <meta name="description"
+    content="Manage your coursework and exams dynamically with Julian Vance's interactive B&W Academic Planner dashboard.">
+  <!-- Descriptive text shown in search engine results (SEO) -->
+  <title>Academic Planner | Jack</title> <!-- The page title shown on the browser tab -->
+  <link rel="stylesheet" href="style.css"> <!-- Links the external CSS design stylesheet for page styling -->
+</head> <!-- Closes the head section -->
+
+<body class="light-theme"> <!-- Main body container of the webpage, defaults to the 'light-theme' class -->
+
+  <!-- Navigation Header -->
+  <header class="header"> <!-- Defines the sticky navigational header of the page -->
+    <div class="container nav-container"> <!-- Grid/flex container limiting the maximum width and centering content -->
+      <a href="index.html" class="logo">Jack <span class="tm">™</span></a>
+      <!-- Logo linking back to the home page with a trademark span -->
+      <button class="nav-toggle" aria-label="Toggle navigation Menu">
+        <!-- Hamburger button visible on mobile screens to toggle navigation menu -->
+        <span></span> <!-- Top bar of the mobile hamburger button -->
+        <span></span> <!-- Middle bar of the mobile hamburger button -->
+        <span></span> <!-- Bottom bar of the mobile hamburger button -->
+      </button> <!-- Closes the hamburger toggle button -->
+
+      <div class="nav-links-wrapper"> <!-- Wrapper container for links and the theme switcher button -->
+        <ul class="nav-links"> <!-- List containing the primary navigation navigation items -->
+          <li><a href="index.html">Home</a></li> <!-- Nav link redirecting to index.html (Home) -->
+          <li><a href="about.html">About</a></li> <!-- Nav link redirecting to about.html (About) -->
+          <li><a href="projects.html">Projects</a></li> <!-- Nav link redirecting to projects.html (Projects) -->
+          <li><a href="planner.html">Planner</a></li> <!-- Nav link redirecting to planner.html (Academic Planner) -->
+          <li><a href="contact.html">Contact</a></li> <!-- Nav link redirecting to contact.html (Contact Form) -->
+        </ul> <!-- Closes the unordered list of navigation links -->
+
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <!-- Button to dynamically switch between dark and light modes -->
+          <!-- Sun icon SVG displayed when the light theme is active (click to toggle to warm dark) -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+          </svg>
+          <!-- Moon icon SVG displayed when the dark theme is active (click to toggle to light theme) -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path
+              d="M12.3 22h-.1c-5.5 0-10-4.5-10-10C2.2 6.7 6.5 2.2 11.8 2c.5 0 .9.3 1 .8s-.1.9-.6 1.2c-3.6 2.1-5.1 6.7-3.3 10.4 1.4 2.9 4.4 4.6 7.6 4.6 1.2 0 2.3-.3 3.4-.9.4-.2.9-.2 1.2.1.3.3.4.8.2 1.2-1.9 2.8-5 4.6-9 4.6zm.4-17.9c-3.8 1-6.6 4.4-6.6 8.4 0 4.8 3.9 8.7 8.7 8.7 2 0 3.8-.7 5.2-1.9-2.9.2-5.7-1.1-7.2-3.8-1.9-3.3-1.6-7.5.3-10.6-.2-.3-.3-.6-.4-.8z" />
+          </svg>
+        </button> <!-- Closes the theme toggle button -->
+      </div> <!-- Closes the nav links wrapper -->
+    </div> <!-- Closes the container div -->
+  </header> <!-- Closes the header element -->
+
+  <!-- Main Content Section -->
+  <main class="container section fade-in-section">
+    <!-- Main content block wrapper with grid containers and scaling fade transitions -->
+    <h1 style="margin-bottom: 1rem;" class="gradient-text">Academic Task Planner</h1>
+    <!-- Page main title heading banner -->
+    <p style="color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px;">
+      Organize and track assignments, exams, and readings for this semester. All records are saved locally on your
+      browser.
+    </p> <!-- Dashboard descriptive summary text -->
+
+    <div class="planner-grid scroll-reveal"> <!-- Split column layout, left controls column, right board dashboard -->
+      <!-- Sidebar Control Column -->
+      <aside class="planner-sidebar"> <!-- Left aside container representing control forms widget -->
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">New Task</h2> <!-- Sidebar sub-heading subtitle -->
+
+        <form id="planner-form" novalidate>
+          <!-- Form element wrapping inputs fields, novalidate overrides browser defaults -->
+          <div class="planner-form-group"> <!-- Form group for task title input field -->
+            <label for="task-title-input">Task Title / Description</label> <!-- Input description label element -->
+            <input type="text" id="task-title-input" class="form-control" placeholder="e.g., Study for midterm exam"
+              required> <!-- Description text field -->
+          </div> <!-- Closes description form group -->
+
+          <div class="planner-form-group"> <!-- Form group for task category selection option -->
+            <label for="task-category-select">Category</label> <!-- Input description label element -->
+            <select id="task-category-select" class="form-control"> <!-- Selection dropdown options list -->
+              <option value="assignment">Assignment</option> <!-- Selection option for Assignments tasks -->
+              <option value="exam">Exam Prep</option> <!-- Selection option for Exam Preps tasks -->
+              <option value="reading">Reading / Video</option> <!-- Selection option for Reading assignments tasks -->
+              <option value="other">Other Activity</option> <!-- Selection option for general/miscellaneous tasks -->
+            </select> <!-- Closes selection dropdown -->
+          </div> <!-- Closes category form group -->
+
+          <div class="planner-form-group"> <!-- Form group wrapping due date and priority selector side by side -->
+            <div class="form-control-row"> <!-- Inner 2-column inputs grid row alignment -->
+              <div> <!-- Due date input alignment wrapper -->
+                <label for="task-date-input">Due Date</label> <!-- Input description label element -->
+                <input type="date" id="task-date-input" class="form-control"> <!-- Date picker field -->
+              </div> <!-- Closes date picker wrapper -->
+              <div> <!-- Priority selection alignment wrapper -->
+                <label for="task-priority-select">Priority</label> <!-- Input description label element -->
+                <select id="task-priority-select" class="form-control"> <!-- Selection options for prioritizing task -->
+                  <option value="high">High</option> <!-- High priority rating -->
+                  <option value="medium" selected>Medium</option> <!-- Medium priority rating (default) -->
+                  <option value="low">Low</option> <!-- Low priority rating -->
+                </select> <!-- Closes selection element -->
+              </div> <!-- Closes priority wrapper -->
+            </div> <!-- Closes inner row alignment wrapper -->
+          </div> <!-- Closes date/priority form group wrapper -->
+
+          <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Add Task</button>
+          <!-- Action submit button to append new task item -->
+        </form> <!-- Closes form element -->
+      </aside> <!-- Closes sidebar control div -->
+
+      <!-- Dashboard Board Column -->
+      <section> <!-- Right board column container displaying statistics and dynamic task items list -->
+        <!-- Statistics Widget -->
+        <div class="planner-stats-container"> <!-- 2-column statistics cards container row -->
+          <div class="stat-box"> <!-- Statistics card displaying total task count -->
+            <div class="stat-value" id="total-tasks">0</div> <!-- Dynamic total count number updated via script.js -->
+            <div class="stat-label">Total Tasks</div> <!-- Description label text -->
+          </div> <!-- Closes total task stat box -->
+          <div class="stat-box"> <!-- Statistics card displaying completed task count -->
+            <div class="stat-value" id="completed-tasks">0</div>
+            <!-- Dynamic completed count number updated via script.js -->
+            <div class="stat-label">Completed</div> <!-- Description label text -->
+          </div> <!-- Closes completed task stat box -->
+        </div> <!-- Closes statistics widgets container row -->
+
+        <div class="progress-bar-wrapper"> <!-- Visual timeline progress bar container element -->
+          <div class="progress-info"> <!-- Progress labels row metadata description -->
+            <span>Overall Progress</span> <!-- Descriptive title -->
+            <span id="progress-percent">0%</span> <!-- Dynamic percentage label updated via script.js -->
+          </div> <!-- Closes progress info labels row -->
+          <div class="progress-outer"> <!-- Outer empty timeline bar track -->
+            <div class="progress-inner" id="planner-progress-inner"></div>
+            <!-- Inner timeline progress filled width visual indicator -->
+          </div> <!-- Closes progress bar element -->
+        </div> <!-- Closes progress wrapper div -->
+
+        <!-- Task List Filters and Header -->
+        <div class="planner-header-row"> <!-- Row aligning list header subtitle and active filters chips -->
+          <h2 style="font-size: 1.5rem; margin-bottom: 0; padding-bottom: 0;">Task List</h2>
+          <!-- List title subtitle -->
+          <div class="skills-filter" style="margin-bottom: 0; gap: 0.25rem;"> <!-- Filter chips list row -->
+            <button class="filter-chip active" data-filter="all">All</button> <!-- Filter tag displays all tasks -->
+            <button class="filter-chip" data-filter="active">Active</button>
+            <!-- Filter tag displays active uncompleted tasks -->
+            <button class="filter-chip" data-filter="completed">Completed</button>
+            <!-- Filter tag displays completed tasks -->
+          </div> <!-- Closes filter chips row -->
+        </div> <!-- Closes task list header row div -->
+
+        <!-- Dynamic List Element -->
+        <ul class="task-list" id="task-list">
+          <!-- Unordered tasks catalog, loaded dynamically via script.js from localstorage -->
+          <!-- Loaded dynamically via script.js -->
+        </ul> <!-- Closes task list container element -->
+      </section> <!-- Closes dashboard board column section -->
+    </div> <!-- Closes split layout planner grid container div -->
+  </main> <!-- Closes main page wrapper element -->
+
+  <!-- Footer -->
+  <footer class="footer"> <!-- Footer block representing informational copyright bar -->
+    <div class="container footer-content"> <!-- Container aligning text content and social linkages -->
+      <span class="footer-text">&copy; 2026 Julian Vance. Built for COS 106 – Introduction to Web Technologies.</span>
+      <!-- Copyright statement metadata copyright -->
+      <div class="footer-socials"> <!-- Flex row layout centering socials links -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <!-- Social external hyperlink pointing to GitHub page -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <!-- Social external hyperlink pointing to LinkedIn page -->
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <!-- Social external hyperlink pointing to Twitter page -->
+      </div> <!-- Closes footer socials div -->
+    </div> <!-- Closes container div -->
+  </footer> <!-- Closes footer element -->
+
+  <script src="script.js"></script> <!-- Imports external Javascript file controlling interactive states -->
+</body> <!-- Closes the body element -->
+
+</html> <!-- Closes the html element -->

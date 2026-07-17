@@ -1,0 +1,190 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 to ensure correct rendering across browsers -->
+<html lang="en"> <!-- Root element of the page, specifying English as the primary language -->
+
+<head> <!-- Container for page metadata, character sets, viewports, and stylesheet linkages -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for wide character support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures the layout scales properly on mobile and desktop viewports -->
+  <meta name="description"
+    content="Get in touch with Julian Vance - Submit questions or inquiries using this validated contact form.">
+  <!-- Descriptive text shown in search engine results (SEO) -->
+  <title>Contact | Jack </title> <!-- The page title shown on the browser tab -->
+  <link rel="stylesheet" href="style.css"> <!-- Links the external CSS design stylesheet for page styling -->
+</head> <!-- Closes the head section -->
+
+<body class="light-theme"> <!-- Main body container of the webpage, defaults to the 'light-theme' class -->
+
+  <!-- Navigation Header -->
+  <header class="header"> <!-- Defines the sticky navigational header of the page -->
+    <div class="container nav-container"> <!-- Grid/flex container limiting the maximum width and centering content -->
+      <a href="index.html" class="logo">Jack <span class="tm">™</span></a>
+      <!-- Logo linking back to the home page with a trademark span -->
+      <button class="nav-toggle" aria-label="Toggle navigation Menu">
+        <!-- Hamburger button visible on mobile screens to toggle navigation menu -->
+        <span></span> <!-- Top bar of the mobile hamburger button -->
+        <span></span> <!-- Middle bar of the mobile hamburger button -->
+        <span></span> <!-- Bottom bar of the mobile hamburger button -->
+      </button> <!-- Closes the hamburger toggle button -->
+
+      <div class="nav-links-wrapper"> <!-- Wrapper container for links and the theme switcher button -->
+        <ul class="nav-links"> <!-- List containing the primary navigation navigation items -->
+          <li><a href="index.html">Home</a></li> <!-- Nav link redirecting to index.html (Home) -->
+          <li><a href="about.html">About</a></li> <!-- Nav link redirecting to about.html (About) -->
+          <li><a href="projects.html">Projects</a></li> <!-- Nav link redirecting to projects.html (Projects) -->
+          <li><a href="planner.html">Planner</a></li> <!-- Nav link redirecting to planner.html (Academic Planner) -->
+          <li><a href="contact.html">Contact</a></li> <!-- Nav link redirecting to contact.html (Contact Form) -->
+        </ul> <!-- Closes the unordered list of navigation links -->
+
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <!-- Button to dynamically switch between dark and light modes -->
+          <!-- Sun icon SVG displayed when the light theme is active (click to toggle to warm dark) -->
+          <svg class="sun-icon" viewBox="0 0 24 24">
+            <path
+              d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+          </svg>
+          <!-- Moon icon SVG displayed when the dark theme is active (click to toggle to light theme) -->
+          <svg class="moon-icon" viewBox="0 0 24 24">
+            <path
+              d="M12.3 22h-.1c-5.5 0-10-4.5-10-10C2.2 6.7 6.5 2.2 11.8 2c.5 0 .9.3 1 .8s-.1.9-.6 1.2c-3.6 2.1-5.1 6.7-3.3 10.4 1.4 2.9 4.4 4.6 7.6 4.6 1.2 0 2.3-.3 3.4-.9.4-.2.9-.2 1.2.1.3.3.4.8.2 1.2-1.9 2.8-5 4.6-9 4.6zm.4-17.9c-3.8 1-6.6 4.4-6.6 8.4 0 4.8 3.9 8.7 8.7 8.7 2 0 3.8-.7 5.2-1.9-2.9.2-5.7-1.1-7.2-3.8-1.9-3.3-1.6-7.5.3-10.6-.2-.3-.3-.6-.4-.8z" />
+          </svg>
+        </button> <!-- Closes the theme toggle button -->
+      </div> <!-- Closes the nav links wrapper -->
+    </div> <!-- Closes the container div -->
+  </header> <!-- Closes the header element -->
+
+  <!-- Main Content Section -->
+  <main class="container section fade-in-section">
+    <!-- Main content block wrapper with grid containers and scaling fade transitions -->
+    <h1 style="margin-bottom: 3rem;" class="gradient-text">Get in Touch</h1> <!-- Page main title heading banner -->
+
+    <div class="contact-grid scroll-reveal"> <!-- Split column layout grid, left details column, right form block -->
+      <!-- Contact Info Details Column -->
+      <div class="contact-info-panel"> <!-- Container holding user location and communication channels -->
+        <div> <!-- Heading alignment wrapper -->
+          <h2>Contact Information</h2> <!-- Left column section subtitle -->
+          <p style="margin-top: 0.5rem; max-width: 450px;">Have questions about my course projects, interested in
+            collaborating, or looking to discuss internship opportunities? Drop a message using the form.</p>
+          <!-- Context information paragraph -->
+        </div> <!-- Closes heading alignment wrapper -->
+
+        <div class="info-item"> <!-- Flex row layout displaying email information -->
+          <div class="info-icon"> <!-- Icon box container display styling -->
+            <!-- Mail icon SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div> <!-- Closes email icon box container -->
+          <div class="info-details"> <!-- Information copy texts alignment container -->
+            <h4>Email Address</h4> <!-- Field label description tag -->
+            <p><a href="mailto:julian.vance@student.edu">m.nunghe5741@miva.edu.ng</a></p>
+            <!-- Active mail hyperlink contact point -->
+          </div> <!-- Closes details wrapper -->
+        </div> <!-- Closes email item row -->
+
+        <div class="info-item"> <!-- Flex row layout displaying phone details -->
+          <div class="info-icon"> <!-- Icon box container display styling -->
+            <!-- Phone icon SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+          </div> <!-- Closes phone icon box container -->
+          <div class="info-details"> <!-- Information copy texts alignment container -->
+            <h4>Phone Number</h4> <!-- Field label description tag -->
+            <p>+15550190333 (Digits: 15550190333)</p> <!-- Phone number string metadata representation -->
+          </div> <!-- Closes details wrapper -->
+        </div> <!-- Closes phone item row -->
+
+        <div class="info-item"> <!-- Flex row layout displaying office address location -->
+          <div class="info-icon"> <!-- Icon box container display styling -->
+            <!-- Location pin icon SVG -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="10" r="3"></circle>
+              <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 7 8 11.7z"></path>
+            </svg>
+          </div> <!-- Closes location icon box container -->
+          <div class="info-details"> <!-- Information copy texts alignment container -->
+            <h4>Office Location</h4> <!-- Field label description tag -->
+            <p>Utako, Abuja<br>FCT</p>
+            <!-- Campus address location coordinates string -->
+          </div> <!-- Closes details wrapper -->
+        </div> <!-- Closes location item row -->
+      </div> <!-- Closes left contact information container panel -->
+
+      <!-- Validated Contact Form Column -->
+      <div> <!-- Right column container displaying form structure elements -->
+        <form id="contact-form" class="contact-form" novalidate> <!-- Submit contact message inputs form wrapper -->
+          <div class="form-group"> <!-- Form group wrapping the name field inputs -->
+            <label for="name">Name</label> <!-- Input description label element -->
+            <input type="text" id="name" placeholder="Your Full Name" required> <!-- User name text field -->
+            <span class="form-error-msg">This field is required.</span>
+            <!-- Inline error validation messages, hidden by default -->
+          </div> <!-- Closes name form group -->
+
+          <div class="form-group"> <!-- Form group wrapping email inputs -->
+            <label for="email">Email Address</label> <!-- Input description label element -->
+            <input type="email" id="email" placeholder="email@example.com" required> <!-- Email format text field -->
+            <span class="form-error-msg">Please enter a valid email.</span>
+            <!-- Inline error validation messages, hidden by default -->
+          </div> <!-- Closes email form group -->
+
+          <div class="form-group"> <!-- Form group wrapping phone input field -->
+            <label for="phone">Phone Number (Digits Only)</label> <!-- Input description label element -->
+            <input type="tel" id="phone" placeholder="e.g., 15550190333" required>
+            <!-- Numeric telephone input field -->
+            <span class="form-error-msg">Phone number must contain digits only.</span>
+            <!-- Inline error validation messages, hidden by default -->
+          </div> <!-- Closes phone form group -->
+
+          <div class="form-group"> <!-- Form group wrapping message text block area -->
+            <label for="message">Message</label> <!-- Input description label element -->
+            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+            <!-- Textbox details write area -->
+            <span class="form-error-msg">This field is required.</span>
+            <!-- Inline error validation messages, hidden by default -->
+          </div> <!-- Closes message form group -->
+
+          <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Submit Message</button>
+          <!-- Action submit button validating form elements -->
+        </form> <!-- Closes message form -->
+      </div> <!-- Closes right column form wrapper -->
+    </div> <!-- Closes split layout contact grid div -->
+  </main> <!-- Closes main page wrapper element -->
+
+  <!-- Success Modal Overlay -->
+  <div class="modal-overlay" id="modal-overlay">
+    <!-- Success modal window overlay background, display switches via active class -->
+    <div class="modal-content"> <!-- Inner content box displaying submission metrics success status -->
+      <div class="modal-icon">✓</div> <!-- Visual checkmark indicator icon -->
+      <h3 class="modal-title">Submission Successful</h3> <!-- Message title header -->
+      <p class="modal-message">Thank you for your message. I have received your submission and will get back to you
+        shortly.</p> <!-- Context success detail messages -->
+      <button class="btn" id="modal-close-btn">Close Window</button> <!-- Button closing active overlay state -->
+    </div> <!-- Closes inner content box wrapper -->
+  </div> <!-- Closes success overlay div -->
+
+  <!-- Footer -->
+  <footer class="footer"> <!-- Footer block representing informational copyright bar -->
+    <div class="container footer-content"> <!-- Container aligning text content and social linkages -->
+      <span class="footer-text">&copy; 2026 Julian Vance. Built for COS 106 – Introduction to Web Technologies.</span>
+      <!-- Copyright statement metadata copyright -->
+      <div class="footer-socials"> <!-- Flex row layout centering socials links -->
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <!-- Social external hyperlink pointing to GitHub page -->
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <!-- Social external hyperlink pointing to LinkedIn page -->
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <!-- Social external hyperlink pointing to Twitter page -->
+      </div> <!-- Closes footer socials div -->
+    </div> <!-- Closes container div -->
+  </footer> <!-- Closes footer element -->
+
+  <script src="script.js"></script> <!-- Imports external Javascript file controlling interactive states -->
+</body> <!-- Closes the body element -->
+
+</html> <!-- Closes the html element -->
