@@ -1,4 +1,4 @@
-# COS 106 - Course Assessment Project
+# CSC 106 - Course Assessment Project
 
 ## 👤 Author
 *   **Name:** MELA NUNGHE
