@@ -1,15 +1,14 @@
 # COS 106 - Course Assessment Project
 
 ## 👤 Author
-*   **Name:** [Insert Your Full Name Here]
-*   **Student ID:** [Insert Your Student ID Here]
+*   **Name:** MELA NUNGHE
+*   **Student ID:** 301805741
 *   **Course:** COS 106 (Introductory Computer Science / Web Development)
-*   **Assessment:** Final Project / Continuous Assessment
 
 A lightweight, responsive web application built as part of the **COS 106** computer science assessment. This project is built using vanilla web technologies and is deployed on **Vercel**.
 
 ## 🚀 Live Demo
-You can view the live deployment here: [cos-106-melat.vercel.app](https://cos-106-melat.vercel.app/)
+You can view the live deployment here: [[cos-106-melat.vercel.app](https://cos-106-melat.vercel.app/)](https://cos-106-melat.vercel.app/)
 
 ---
 
